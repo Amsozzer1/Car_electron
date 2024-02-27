@@ -1,17 +1,40 @@
 <html>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 <script src="index.js"></script>
 
 <body>
-<h1>My First Website</h1>
-<p>Hello IoT!</p>
 
-My name is: <input id="myName" type="text" placeholder="name"/>
+
+<div style="opacity: 0;">
+  My name is: <input id="myName" type="text" placeholder="name"/>
 <button class="btn btn-success" onclick="greeting()">Sumbit</button>
 <br>
+</div>
+<div id="video_cluster" style="scrollbar-width: 0; transform: rotate(180deg);">
+  <iframe src="http://192.168.0.191:8000/index.html" width="920" height="500" ></iframe>
+</div>
+<div id="gauge_cluster">
+  <p id="speed_label">Speed:
+  <span id = "speed"></span></p>
+  <p id="direction_label">Direction:
+    <span id = "direction"></span></p>
+  <p>Step Array
+  <span id="step_array"></span></p>
+  <!-- <div id="temperature"></div> -->
+</div>
 <span id="greet"> </span>
 <br>
 <span id="greet_from_server"> </span>
+
+  <div class="gamepad">
+    <button class="control up" onclick="move('up')">Up</button>
+    <button class="control left" onclick="move('left')">Left</button>
+    <button class="control action" onclick="move('Action')">Action</button>
+    <button class="control right" onclick="move('right')">Right</button>
+    <button class="control down" onclick="move('reverse')">Down</button>
+</div>
+
+
 </body>
 
 </html>
